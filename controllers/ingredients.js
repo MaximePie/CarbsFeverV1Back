@@ -8,7 +8,7 @@ const Ingredient = require('../model/ingredient');
  */
 async function index (request, response) {
   return response.json({
-    ingredients: await Ingredient.find({}),
+    ingredients: await Ingredient.find({}).sort({name: 1}),
   });
 }
 
